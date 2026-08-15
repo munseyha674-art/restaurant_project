@@ -17,7 +17,7 @@ class ProfileScreen extends StatelessWidget {
       builder: (context, lang, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('ព័ត៌មានផ្ទាល់ខ្លួន'),
+            title: Text(AppStrings.t('personal_information')),
             backgroundColor: AppColors.primary,
             foregroundColor: Colors.white,
             elevation: 0,

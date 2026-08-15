@@ -35,6 +35,7 @@ class AppStrings {
     'nav_profile': {AppLanguage.km: 'ប្រវត្តិរូប', AppLanguage.en: 'Profile'},
 
     // --- Profile ---
+    'personal_information':{AppLanguage.km: 'ព័ត៌មានផ្ទាល់ខ្លួន', AppLanguage.en: 'Personal Information'},
     'account_settings': {AppLanguage.km: 'ការកំណត់គណនី', AppLanguage.en: 'Account Settings'},
     'order_history': {AppLanguage.km: 'ប្រវត្តិការកម្មង់', AppLanguage.en: 'Order History'},
     'delivery_address': {AppLanguage.km: 'អាសយដ្ឋានដឹកជញ្ជូន', AppLanguage.en: 'Delivery Address'},
