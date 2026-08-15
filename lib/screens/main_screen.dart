@@ -26,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> get pages => [
     const HomeScreen(),
     SearchScreen(onGoHome: goToHomeTab),
-    CartScreen(key: ValueKey(cartRefreshKey)),
+    CartScreen(key: ValueKey(cartRefreshKey), onGoHome: goToHomeTab),
     const ProfileScreen(),
   ];
 

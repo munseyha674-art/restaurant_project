@@ -8,7 +8,11 @@ import '../widgets/gradient_button.dart';
 import 'checkout_screen.dart';
 
 class CartScreen extends StatefulWidget {
-  const CartScreen({super.key});
+  // ប្រើពេល CartScreen ជា tab ក្នុង bottom nav (IndexedStack) —
+  // ដើម្បីប្រាប់ MainScreen ថាត្រូវប្តូរទៅ Home tab វិញ
+  final VoidCallback? onGoHome;
+
+  const CartScreen({super.key, this.onGoHome});
 
   @override
   State<CartScreen> createState() => _CartScreenState();
@@ -24,6 +28,22 @@ class _CartScreenState extends State<CartScreen> {
       valueListenable: LanguageService.instance.current,
       builder: (context, lang, child) {
         return Scaffold(
+          appBar: AppBar(
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back_ios_new, size: 18),
+              onPressed: () {
+                if (Navigator.canPop(context)) {
+                  Navigator.popUntil(context, (route) => route.isFirst);
+                } else if (widget.onGoHome != null) {
+                  widget.onGoHome!();
+                }
+              },
+            ),
+            title: Text(AppStrings.t('your_cart')),
+            backgroundColor: AppColors.primary,
+            foregroundColor: Colors.white,
+            elevation: 0,
+          ),
           body: SafeArea(
             child: cartItems.isEmpty
                 ? Center(
@@ -41,12 +61,6 @@ class _CartScreenState extends State<CartScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    AppStrings.t('your_cart'),
-                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: AppColors.textDark),
-                  ),
-                  const SizedBox(height: 16),
-
                   ListView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
