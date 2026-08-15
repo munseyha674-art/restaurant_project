@@ -10,6 +10,7 @@ class Food {
   int ratingCount;
   int restaurantId;
   bool isSoldOut;
+  String category; // 'food', 'drink', or 'dessert'
 
   Food({
     required this.id,
@@ -23,5 +24,6 @@ class Food {
     this.ratingCount = 0,
     this.restaurantId = 1,
     this.isSoldOut = false,
+    this.category = 'food',
   });
 }

@@ -19,9 +19,13 @@ class _MainScreenState extends State<MainScreen> {
   int currentIndex = 0;
   int cartRefreshKey = 0;
 
+  void goToHomeTab() {
+    setState(() => currentIndex = 0);
+  }
+
   List<Widget> get pages => [
     const HomeScreen(),
-    const SearchScreen(),
+    SearchScreen(onGoHome: goToHomeTab),
     CartScreen(key: ValueKey(cartRefreshKey)),
     const ProfileScreen(),
   ];

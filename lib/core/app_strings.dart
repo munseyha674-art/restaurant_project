@@ -25,6 +25,8 @@ class AppStrings {
     'burger': {AppLanguage.km: 'ប៊ឺហ្គឺរ', AppLanguage.en: 'Burger'},
     'asian': {AppLanguage.km: 'អាស៊ី', AppLanguage.en: 'Asian'},
     'dessert': {AppLanguage.km: 'បង្អែម', AppLanguage.en: 'Dessert'},
+    'food_category': {AppLanguage.km: 'ម្ហូប', AppLanguage.en: 'Food'},
+    'drink_category': {AppLanguage.km: 'ភេសជ្ជៈ', AppLanguage.en: 'Drink'},
 
     // --- Bottom nav ---
     'nav_home': {AppLanguage.km: 'ទំព័រដើម', AppLanguage.en: 'Home'},
@@ -69,6 +71,10 @@ class AppStrings {
     'order_received_online': {AppLanguage.km: 'ការកម្មង់របស់អ្នកត្រូវបានទទួល សូមបញ្ចប់ការបង់ប្រាក់អនឡាញ', AppLanguage.en: 'Your order has been received. Please complete online payment.'},
     'ok': {AppLanguage.km: 'OK', AppLanguage.en: 'OK'},
     'no_orders_yet': {AppLanguage.km: 'មិនទាន់មានការកម្មង់', AppLanguage.en: 'No orders yet'},
+    'search_title': {AppLanguage.km: 'ស្វែងរក', AppLanguage.en: 'Search'},
+    'search_placeholder': {AppLanguage.km: 'ស្វែងរកម្ហូប...', AppLanguage.en: 'Search for food...'},
+    'type_to_search': {AppLanguage.km: 'វាយឈ្មោះម្ហូបដើម្បីស្វែងរក', AppLanguage.en: 'Type a food name to search'},
+    'no_results': {AppLanguage.km: 'រកមិនឃើញលទ្ធផល', AppLanguage.en: 'No results found'},
   };
 
   static String t(String key) {
